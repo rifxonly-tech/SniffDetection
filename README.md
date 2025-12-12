@@ -188,24 +188,6 @@ Take **screenshot #2**.
 
 ---
 
-### **Method 2 – ARP Spoofing (Clear Detection)**
-
-If dsniff is installed:
-
-```
-sudo arpspoof -i enp0s3 192.168.10.10
-```
-
-**Effect on iptraf:**
-
-* Repeated ARP replies
-* Attacker MAC appears as gateway/device
-* Traffic spikes
-
-Take **screenshot #3**.
-
----
-
 ## **📌 8. Analysis (Why iptraf Detects Sniffing)**
 
 Sniffing tools such as *tcpdump* and *arpspoof* create detectable anomalies:
@@ -214,15 +196,11 @@ Sniffing tools such as *tcpdump* and *arpspoof* create detectable anomalies:
 
 Sniffing requires the attacker’s NIC to accept all packets, not just those addressed to itself.
 
-### **2. ARP Traffic Anomalies**
-
-ARP spoofing causes continuous forged ARP replies, visible clearly in iptraf.
-
-### **3. Unexpected MAC/IP Activity**
+### **2. Unexpected MAC/IP Activity**
 
 The Client VM receives packets that **should not normally reach it**, which iptraf displays.
 
-### **4. Broadcast Traffic Spikes**
+### **3. Broadcast Traffic Spikes**
 
 Sniffing frequently generates excessive broadcast frames.
 
