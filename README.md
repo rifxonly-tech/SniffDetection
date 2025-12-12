@@ -258,5 +258,3 @@ C:\Users\YOUR_USER\VirtualBox VMs\
 This project demonstrates how a simple VirtualBox environment can be used to analyze suspicious network activity. Using iptraf-ng alongside sniffing tools provides a clear understanding of how network monitoring works and how sniffing attempts can be detected based on abnormal traffic patterns.
 
 ---
-
-If you need a **PDF version**, **Word version**, or want this README expanded into a full report, just let me know.
